@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
+import '../App.css';
+
 
 export const Error404 = () => {
     return (
@@ -13,8 +15,7 @@ export const Error404 = () => {
         }}>
             <h1>Error 404</h1>
             <p>Sorry, we couldn't find this page.</p>
-            <Link to='/' style={{ background: 'black', color: 'white', paddinq: '6px 12px', textDecoration:'none' }}>Back to homepage</Link>
-
+            <Link to="/" className="button-link">Back to Homepage</Link>
         </div>
     )
 }
