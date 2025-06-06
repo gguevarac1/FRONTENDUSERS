@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router";
+import { UserCard } from "../components/UserCard";
 
 export const Users =()=>{
     const [users, setUsers] = useState([])
@@ -36,8 +38,8 @@ export const Users =()=>{
 
 return (
   <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-    <h2 style={{ marginBottom: '20px', color: '#333' }}>Users List</h2>
-    <table style={{
+    <h2 style={{ marginBottom: '10px', color: '#333' }}>USER LIST</h2>
+    {/* <table style={{
       width: '100%',
       borderCollapse: 'collapse',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -66,11 +68,17 @@ return (
           </tr>
         ))}
       </tbody>
-    </table>
+    </table> */}
+    <div style= {{
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4,1fr)',
+      gap: 20,
+      marginTop:15
+    }}>
+      {users.map((user)=>(
+        <UserCard id={user.id} name={user.name} email={user.email}></UserCard>
+      ))}
+    </div>
   </div>
 );
-
-        
-    
-    
 }
