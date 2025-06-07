@@ -19,7 +19,7 @@ export const Home = () => {
             <div 
                 style={{display:'flex', gap:30}}>
                 <Link to="/users" className="button-primary">Users</Link>
-                <Link to="/create" className="button-success">Register</Link>
+                <Link to="/create " className="button-success">Register</Link>
             </div>
         </div>
     )
